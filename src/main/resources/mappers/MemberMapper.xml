@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="spring5_mybatis_validation_study.mapper.MemberMapper">
+
+		<sql id="selectSQL">
+			select ID, EMAIL, PASSWORD, NAME, REGDATE 
+			from member 
+		</sql>
+		
+		<select id="selectByEmail" resultType="Member">
+			<include refid="selectSQL"/>
+			where email = #{email}	
+		</select>
+		
+		<insert id="insert" parameterType="Member" >
+				insert into member(EMAIL, PASSWORD, NAME)
+				 values (#{email}, #{password}, #{name} )		
+		</insert>
+
+</mapper>
+
