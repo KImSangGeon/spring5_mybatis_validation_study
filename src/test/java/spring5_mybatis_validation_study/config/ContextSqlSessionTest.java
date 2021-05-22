@@ -17,6 +17,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import spring5_mybatis_validation_study.config.ContextSqlSessionTest;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {ContextRoot.class})
+
 public class ContextSqlSessionTest {
 
 	private static final Log log = LogFactory.getLog(ContextSqlSessionTest.class);

@@ -18,6 +18,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {ContextRoot.class})
+
 public class ContextDataSourceTest {
 
 	private static final Log log = LogFactory.getLog(ContextDataSourceTest.class);

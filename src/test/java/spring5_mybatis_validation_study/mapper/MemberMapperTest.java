@@ -44,7 +44,7 @@ public class MemberMapperTest {
 	public void testInsert() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
 		
-		Member member = new Member("tkdrjs9@naver.com", "tkdrjs999", "김유진");
+		Member member = new Member("tkdrjs20@naver.com", "tkdrjs", "김유진");
 		int res = mapper.insert(member);
 		Assert.assertEquals(1, res);
 		
