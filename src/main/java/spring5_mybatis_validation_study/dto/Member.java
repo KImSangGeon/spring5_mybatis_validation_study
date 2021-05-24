@@ -19,6 +19,9 @@ public class Member {
 		//else 생략
 		this.password = newPassword;
 	}
+	public boolean matchPassword(String password) {
+		return this.password.equals(password);
+	}
 	
 	
 	public Member(String email, String password, String name) {

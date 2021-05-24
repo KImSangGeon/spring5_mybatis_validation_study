@@ -13,9 +13,14 @@
 		</select>
 		
 		<insert id="insert" parameterType="Member" >
-				insert into member(EMAIL, PASSWORD, NAME)
-				 values (#{email}, #{password}, #{name} )		
+				insert into member(EMAIL, PASSWORD, NAME, REGDATE)
+				 values (#{email}, #{password}, #{name}, #{ registerDateTime})		
 		</insert>
+		
+		<update id="update" parameterType="Member">
+				update member set name = #{name}, password = #{password} 
+				where email = #{email}
+		</update>
 
 </mapper>
 

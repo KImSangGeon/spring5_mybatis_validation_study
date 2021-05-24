@@ -7,6 +7,7 @@
 	<settings>
 		<setting name="mapUnderscoreToCamelCase" value="true"/>
 	</settings>
+	
 <!-- 별명 선언해주기 -> dto -->
 	<typeAliases>
 		<package name="spring5_mybatis_validation_study.dto"/>

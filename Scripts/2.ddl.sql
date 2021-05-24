@@ -10,5 +10,5 @@ insert into member(EMAIL, PASSWORD, NAME) values
 ('tkdrjs2@naver.com', 'tkdrjs8', '김민');
 select ID, EMAIL, PASSWORD, NAME, REGDATE from member;
 
-delete from member where id < 36;
+delete from member where id > 36;
 
