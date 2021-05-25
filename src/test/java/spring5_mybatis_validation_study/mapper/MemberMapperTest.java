@@ -1,5 +1,8 @@
 package spring5_mybatis_validation_study.mapper;
 
+import java.time.LocalDateTime;
+import java.util.List;
+
 import org.apache.ibatis.logging.Log;
 import org.apache.ibatis.logging.LogFactory;
 import org.junit.After;
@@ -12,6 +15,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
 import spring5_mybatis_validation_study.config.ContextRoot;
+import spring5_mybatis_validation_study.dto.ListCommand;
 import spring5_mybatis_validation_study.dto.Member;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -54,6 +58,18 @@ public class MemberMapperTest {
 		Member newMember = new Member("tkdrjs20@naver.com", "tkdrjs", "111111");
 		int res =mapper.update(newMember);
 		Assert.assertEquals(1, res);
+	}
+	
+	@Test
+	public void testSelectMemberByDate() {
+		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
+		ListCommand listCommand = new ListCommand();
+		LocalDateTime from = LocalDateTime.of(2021, 5, 17, 00, 00);
+		LocalDateTime to = LocalDateTime.of(2021, 5, 26, 00, 00);
+		listCommand.setFrom(from);
+		listCommand.setTo(to);
+		List<Member> list = mapper.selectByRedate(listCommand);
+		Assert.assertNotNull(list);
 	}
 
 }

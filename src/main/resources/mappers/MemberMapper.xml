@@ -2,6 +2,14 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="spring5_mybatis_validation_study.mapper.MemberMapper">
 
+	<resultMap type="Member" id="ResMember">
+		<id property="id" column="id"/>
+		<result property="email" column="email"/>
+		<result property="name" column="name"/>
+		<result property="password" column="password"/>
+		<result property="registerDateTime" column="regdate"/>
+	</resultMap>
+
 		<sql id="selectSQL">
 			select ID, EMAIL, PASSWORD, NAME, REGDATE 
 			from member 
@@ -21,6 +29,13 @@
 				update member set name = #{name}, password = #{password} 
 				where email = #{email}
 		</update>
+		
+		<!-- 기간별 조회 -->
+		<select id="selectByRedate" parameterType="ListCommand" resultType="Member" >
+			<include refid="selectSQL"/>
+			where REGDATE between #{from} and #{to}
+			order by REGDATE DESC
+		</select>	
 
 </mapper>
 
