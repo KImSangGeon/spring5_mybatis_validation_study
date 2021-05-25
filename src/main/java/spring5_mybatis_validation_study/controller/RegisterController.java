@@ -21,7 +21,7 @@ public class RegisterController {
 		private MemberRegisterService service;
 
 		@RequestMapping("/register/step1")
-		public String handleStep11() {
+		public String handleStep1() {
 			return "register/step1";
 		}
 		@PostMapping("/register/step2")

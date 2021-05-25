@@ -1,0 +1,129 @@
+[DEBUG] [2021-05-22 16:15] testInsert()
+[DEBUG] [2021-05-22 16:15] ==>  Preparing: insert into member(EMAIL, PASSWORD, NAME) values (?, ?, ? )
+[DEBUG] [2021-05-22 16:15] ==> Parameters: tkdrjs10@naver.com(String), tkdrjs10(String), ±èÀ¯Áø(String)
+[DEBUG] [2021-05-22 16:15] <==    Updates: 1
+[DEBUG] [2021-05-22 16:15] testDataSource()
+[DEBUG] [2021-05-22 16:15] DataSource HikariDataSource (springHikariCP)
+[DEBUG] [2021-05-22 16:15] LoginTimeout 30
+[DEBUG] [2021-05-22 16:15] testSqlSession()
+[DEBUG] [2021-05-22 16:15] session org.apache.ibatis.session.defaults.DefaultSqlSession@5df0ddab
+[DEBUG] [2021-05-22 16:15] testSelectByEmail()
+[DEBUG] [2021-05-22 16:15] ==>  Preparing: select ID, EMAIL, PASSWORD, NAME, REGDATE from member where email = ?
+[DEBUG] [2021-05-22 16:15] ==> Parameters: tkdrjs7@naver.com(String)
+[TRACE] [2021-05-22 16:15] <==    Columns: ID, EMAIL, PASSWORD, NAME, REGDATE
+[TRACE] [2021-05-22 16:15] <==        Row: 35, tkdrjs7@naver.com, tkdrjs12, ±è»ó°Ç, 2021-05-20 10:55:59.0
+[DEBUG] [2021-05-22 16:15] <==      Total: 1
+[DEBUG] [2021-05-22 16:15] id=35,  name=±è»ó°Ç, password=tkdrjs12,  registerDateTime=null
+[DEBUG] [2021-05-22 16:15] testInsert()
+[DEBUG] [2021-05-22 16:15] ==>  Preparing: insert into member(EMAIL, PASSWORD, NAME) values (?, ?, ? )
+[DEBUG] [2021-05-22 16:15] ==> Parameters: tkdrjs10@naver.com(String), tkdrjs10(String), ±èÀ¯Áø(String)
+[DEBUG] [2021-05-22 16:18] testSelectByEmail()
+[DEBUG] [2021-05-22 16:18] ==>  Preparing: select ID, EMAIL, PASSWORD, NAME, REGDATE from member where email = ?
+[DEBUG] [2021-05-22 16:18] ==> Parameters: tkdrjs7@naver.com(String)
+[DEBUG] [2021-05-22 16:18] <==      Total: 0
+[DEBUG] [2021-05-22 16:18] testInsert()
+[DEBUG] [2021-05-22 16:18] ==>  Preparing: insert into member(EMAIL, PASSWORD, NAME) values (?, ?, ? )
+[DEBUG] [2021-05-22 16:18] ==> Parameters: tkdrjs7@naver.com(String), tkdrjs(String), ±èÀ¯Áø(String)
+[DEBUG] [2021-05-22 16:18] <==    Updates: 1
+[DEBUG] [2021-05-22 16:18] testDataSource()
+[DEBUG] [2021-05-22 16:18] DataSource HikariDataSource (springHikariCP)
+[DEBUG] [2021-05-22 16:18] LoginTimeout 30
+[DEBUG] [2021-05-22 16:18] testSqlSession()
+[DEBUG] [2021-05-22 16:18] session org.apache.ibatis.session.defaults.DefaultSqlSession@628442d2
+[DEBUG] [2021-05-22 16:18] testSelectByEmail()
+[DEBUG] [2021-05-22 16:18] ==>  Preparing: select ID, EMAIL, PASSWORD, NAME, REGDATE from member where email = ?
+[DEBUG] [2021-05-22 16:18] ==> Parameters: tkdrjs7@naver.com(String)
+[TRACE] [2021-05-22 16:18] <==    Columns: ID, EMAIL, PASSWORD, NAME, REGDATE
+[TRACE] [2021-05-22 16:18] <==        Row: 54, tkdrjs7@naver.com, tkdrjs, ±èÀ¯Áø, null
+[DEBUG] [2021-05-22 16:18] <==      Total: 1
+[DEBUG] [2021-05-22 16:18] id=54,  name=±èÀ¯Áø, password=tkdrjs,  registerDateTime=null
+[DEBUG] [2021-05-22 16:18] testInsert()
+[DEBUG] [2021-05-22 16:18] ==>  Preparing: insert into member(EMAIL, PASSWORD, NAME) values (?, ?, ? )
+[DEBUG] [2021-05-22 16:18] ==> Parameters: tkdrjs8@naver.com(String), tkdrjs(String), ±èÀ¯Áø(String)
+[DEBUG] [2021-05-22 16:18] <==    Updates: 1
+[DEBUG] [2021-05-22 16:18] testDataSource()
+[DEBUG] [2021-05-22 16:18] DataSource HikariDataSource (springHikariCP)
+[DEBUG] [2021-05-22 16:18] LoginTimeout 30
+[DEBUG] [2021-05-22 16:18] testSqlSession()
+[DEBUG] [2021-05-22 16:18] session org.apache.ibatis.session.defaults.DefaultSqlSession@35710225
+[DEBUG] [2021-05-22 16:18] testDataSource()
+[DEBUG] [2021-05-22 16:18] DataSource HikariDataSource (springHikariCP)
+[DEBUG] [2021-05-22 16:18] LoginTimeout 30
+[DEBUG] [2021-05-22 16:18] testSqlSession()
+[DEBUG] [2021-05-22 16:18] session org.apache.ibatis.session.defaults.DefaultSqlSession@58ebfd03
+[DEBUG] [2021-05-22 16:18] testSelectByEmail()
+[DEBUG] [2021-05-22 16:18] ==>  Preparing: select ID, EMAIL, PASSWORD, NAME, REGDATE from member where email = ?
+[DEBUG] [2021-05-22 16:18] ==> Parameters: tkdrjs7@naver.com(String)
+[TRACE] [2021-05-22 16:18] <==    Columns: ID, EMAIL, PASSWORD, NAME, REGDATE
+[TRACE] [2021-05-22 16:18] <==        Row: 54, tkdrjs7@naver.com, tkdrjs, ê¹€ìœ ì§„, null
+[DEBUG] [2021-05-22 16:18] <==      Total: 1
+[DEBUG] [2021-05-22 16:18] id=54,  name=ê¹€ìœ ì§„, password=tkdrjs,  registerDateTime=null
+[DEBUG] [2021-05-22 16:18] testInsert()
+[DEBUG] [2021-05-22 16:18] ==>  Preparing: insert into member(EMAIL, PASSWORD, NAME) values (?, ?, ? )
+[DEBUG] [2021-05-22 16:18] ==> Parameters: tkdrjs8@naver.com(String), tkdrjs(String), ê¹€ìœ ì§„(String)
+[DEBUG] [2021-05-22 16:23] testSelectByEmail()
+[DEBUG] [2021-05-22 16:23] ==>  Preparing: select ID, EMAIL, PASSWORD, NAME, REGDATE from member where email = ?
+[DEBUG] [2021-05-22 16:23] ==> Parameters: tkdrjs7@naver.com(String)
+[TRACE] [2021-05-22 16:23] <==    Columns: ID, EMAIL, PASSWORD, NAME, REGDATE
+[TRACE] [2021-05-22 16:23] <==        Row: 54, tkdrjs7@naver.com, tkdrjs, ê¹€ìœ ì§„, null
+[DEBUG] [2021-05-22 16:23] <==      Total: 1
+[DEBUG] [2021-05-22 16:23] id=54,  name=ê¹€ìœ ì§„, password=tkdrjs,  registerDateTime=null
+[DEBUG] [2021-05-22 16:23] testInsert()
+[DEBUG] [2021-05-22 16:23] ==>  Preparing: insert into member(EMAIL, PASSWORD, NAME) values (?, ?, ? )
+[DEBUG] [2021-05-22 16:23] ==> Parameters: tkdrjs20@naver.com(String), tkdrjs(String), ê¹€ìœ ì§„(String)
+[DEBUG] [2021-05-22 16:23] <==    Updates: 1
+[DEBUG] [2021-05-22 16:24] testDataSource()
+[DEBUG] [2021-05-22 16:24] DataSource HikariDataSource (springHikariCP)
+[DEBUG] [2021-05-22 16:24] LoginTimeout 30
+[DEBUG] [2021-05-22 16:24] testSqlSession()
+[DEBUG] [2021-05-22 16:24] session org.apache.ibatis.session.defaults.DefaultSqlSession@293cde83
+[DEBUG] [2021-05-22 16:24] testSelectByEmail()
+[DEBUG] [2021-05-22 16:24] ==>  Preparing: select ID, EMAIL, PASSWORD, NAME, REGDATE from member where email = ?
+[DEBUG] [2021-05-22 16:24] ==> Parameters: tkdrjs7@naver.com(String)
+[TRACE] [2021-05-22 16:24] <==    Columns: ID, EMAIL, PASSWORD, NAME, REGDATE
+[TRACE] [2021-05-22 16:24] <==        Row: 54, tkdrjs7@naver.com, tkdrjs, ê¹€ìœ ì§„, null
+[DEBUG] [2021-05-22 16:24] <==      Total: 1
+[DEBUG] [2021-05-22 16:24] id=54,  name=ê¹€ìœ ì§„, password=tkdrjs,  registerDateTime=null
+[DEBUG] [2021-05-22 16:24] testInsert()
+[DEBUG] [2021-05-22 16:24] ==>  Preparing: insert into member(EMAIL, PASSWORD, NAME) values (?, ?, ? )
+[DEBUG] [2021-05-22 16:24] ==> Parameters: tkdrjs20@naver.com(String), tkdrjs(String), ê¹€ìœ ì§„(String)
+[DEBUG] [2021-05-22 16:25] testSelectByEmail()
+[DEBUG] [2021-05-22 16:25] ==>  Preparing: select ID, EMAIL, PASSWORD, NAME, REGDATE from member where email = ?
+[DEBUG] [2021-05-22 16:25] ==> Parameters: tkdrjs7@naver.com(String)
+[TRACE] [2021-05-22 16:25] <==    Columns: ID, EMAIL, PASSWORD, NAME, REGDATE
+[TRACE] [2021-05-22 16:25] <==        Row: 54, tkdrjs7@naver.com, tkdrjs, ê¹€ìœ ì§„, null
+[DEBUG] [2021-05-22 16:25] <==      Total: 1
+[DEBUG] [2021-05-22 16:25] id=54,  name=ê¹€ìœ ì§„, password=tkdrjs,  registerDateTime=null
+[DEBUG] [2021-05-22 16:25] testInsert()
+[DEBUG] [2021-05-22 16:25] ==>  Preparing: insert into member(EMAIL, PASSWORD, NAME) values (?, ?, ? )
+[DEBUG] [2021-05-22 16:25] ==> Parameters: tkdrjs20@naver.com(String), tkdrjs(String), ê¹€ìœ ì§„(String)
+[DEBUG] [2021-05-22 16:27] testDataSource()
+[DEBUG] [2021-05-22 16:27] DataSource HikariDataSource (springHikariCP)
+[DEBUG] [2021-05-22 16:27] LoginTimeout 30
+[DEBUG] [2021-05-22 16:27] testSqlSession()
+[DEBUG] [2021-05-22 16:27] session org.apache.ibatis.session.defaults.DefaultSqlSession@2fc5b9df
+[DEBUG] [2021-05-22 16:27] testSelectByEmail()
+[DEBUG] [2021-05-22 16:27] ==>  Preparing: select ID, EMAIL, PASSWORD, NAME, REGDATE from member where email = ?
+[DEBUG] [2021-05-22 16:27] ==> Parameters: tkdrjs7@naver.com(String)
+[TRACE] [2021-05-22 16:27] <==    Columns: ID, EMAIL, PASSWORD, NAME, REGDATE
+[TRACE] [2021-05-22 16:27] <==        Row: 54, tkdrjs7@naver.com, tkdrjs, ±èÀ¯Áø, null
+[DEBUG] [2021-05-22 16:27] <==      Total: 1
+[DEBUG] [2021-05-22 16:27] id=54,  name=±èÀ¯Áø, password=tkdrjs,  registerDateTime=null
+[DEBUG] [2021-05-22 16:27] testInsert()
+[DEBUG] [2021-05-22 16:27] ==>  Preparing: insert into member(EMAIL, PASSWORD, NAME) values (?, ?, ? )
+[DEBUG] [2021-05-22 16:27] ==> Parameters: tkdrjs20@naver.com(String), tkdrjs(String), ±èÀ¯Áø(String)
+[DEBUG] [2021-05-22 16:28] testSelectByEmail()
+[DEBUG] [2021-05-22 16:28] ==>  Preparing: select ID, EMAIL, PASSWORD, NAME, REGDATE from member where email = ?
+[DEBUG] [2021-05-22 16:28] ==> Parameters: tkdrjs7@naver.com(String)
+[TRACE] [2021-05-22 16:28] <==    Columns: ID, EMAIL, PASSWORD, NAME, REGDATE
+[TRACE] [2021-05-22 16:28] <==        Row: 54, tkdrjs7@naver.com, tkdrjs, ±èÀ¯Áø, null
+[DEBUG] [2021-05-22 16:28] <==      Total: 1
+[DEBUG] [2021-05-22 16:28] id=54,  name=±èÀ¯Áø, password=tkdrjs,  registerDateTime=null
+[DEBUG] [2021-05-22 16:28] testInsert()
+[DEBUG] [2021-05-22 16:28] ==>  Preparing: insert into member(EMAIL, PASSWORD, NAME) values (?, ?, ? )
+[DEBUG] [2021-05-22 16:28] ==> Parameters: tkdrjs20@naver.com(String), tkdrjs(String), ±èÀ¯Áø(String)
+[DEBUG] [2021-05-22 16:28] testDataSource()
+[DEBUG] [2021-05-22 16:28] DataSource HikariDataSource (springHikariCP)
+[DEBUG] [2021-05-22 16:28] LoginTimeout 30
+[DEBUG] [2021-05-22 16:28] testSqlSession()
+[DEBUG] [2021-05-22 16:28] session org.apache.ibatis.session.defaults.DefaultSqlSession@5d6084b0

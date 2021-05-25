@@ -1,7 +1,5 @@
 package spring5_mybatis_validation_study.config;
 
-import static org.junit.Assert.fail;
-
 import java.sql.SQLException;
 
 import javax.sql.DataSource;
@@ -15,10 +13,11 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {ContextRoot.class})
-
+@WebAppConfiguration
 public class ContextDataSourceTest {
 
 	private static final Log log = LogFactory.getLog(ContextDataSourceTest.class);

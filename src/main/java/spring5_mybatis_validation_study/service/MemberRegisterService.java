@@ -14,10 +14,6 @@ import spring5_mybatis_validation_study.mapper.MemberMapper;
 public class MemberRegisterService {
 		@Autowired
 		private MemberMapper memberMapper;
-
-//		public MemberRegisterService(MemberDao memberDao) {
-//		this.memberDao = memberDao;
-//		}
 		
 		public Long regist(RegisterRequest req) {
 			Member member = memberMapper.selectByEmail(req.getEmail());

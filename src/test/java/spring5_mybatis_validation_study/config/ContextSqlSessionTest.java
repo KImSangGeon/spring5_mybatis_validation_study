@@ -1,7 +1,5 @@
 package spring5_mybatis_validation_study.config;
 
-import static org.junit.Assert.*;
-
 import org.apache.ibatis.logging.Log;
 import org.apache.ibatis.logging.LogFactory;
 import org.apache.ibatis.session.SqlSession;
@@ -13,11 +11,10 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import spring5_mybatis_validation_study.config.ContextSqlSessionTest;
+import org.springframework.test.context.web.WebAppConfiguration;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {ContextRoot.class})
-
+@WebAppConfiguration
 public class ContextSqlSessionTest {
 
 	private static final Log log = LogFactory.getLog(ContextSqlSessionTest.class);
