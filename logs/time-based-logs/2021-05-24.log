@@ -1,0 +1,32 @@
+[DEBUG] [2021-05-24 16:00] testDataSource()
+[DEBUG] [2021-05-24 16:00] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2021-05-24 16:00] LoginTimeout 30
+[DEBUG] [2021-05-24 16:00] testSqlSession()
+[DEBUG] [2021-05-24 16:00] session org.apache.ibatis.session.defaults.DefaultSqlSession@51a897e2
+[DEBUG] [2021-05-24 16:00] testSelectByEmail()
+[DEBUG] [2021-05-24 16:00] ==>  Preparing: select ID, EMAIL, PASSWORD, NAME, REGDATE from member where email = ?
+[DEBUG] [2021-05-24 16:00] ==> Parameters: tkdrjs7@naver.com(String)
+[TRACE] [2021-05-24 16:00] <==    Columns: ID, EMAIL, PASSWORD, NAME, REGDATE
+[TRACE] [2021-05-24 16:00] <==        Row: 66, tkdrjs7@naver.com, 1111111, ±è»ó°Ç, 2021-05-24 11:49:22.0
+[DEBUG] [2021-05-24 16:00] <==      Total: 1
+[DEBUG] [2021-05-24 16:00] id=66,  name=±è»ó°Ç, password=1111111,  registerDateTime=null
+[DEBUG] [2021-05-24 16:00] testInsert()
+[DEBUG] [2021-05-24 16:00] ==>  Preparing: insert into member(EMAIL, PASSWORD, NAME, REGDATE) values (?, ?, ?, ?)
+[DEBUG] [2021-05-24 16:00] ==> Parameters: tkdrjs20@naver.com(String), tkdrjs(String), ±èÀ¯Áø(String), null
+[DEBUG] [2021-05-24 16:00] <==    Updates: 1
+[DEBUG] [2021-05-24 16:09] testDataSource()
+[DEBUG] [2021-05-24 16:09] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2021-05-24 16:09] LoginTimeout 30
+[DEBUG] [2021-05-24 16:09] testSqlSession()
+[DEBUG] [2021-05-24 16:09] session org.apache.ibatis.session.defaults.DefaultSqlSession@3b5b6680
+[DEBUG] [2021-05-24 16:09] testSelectByEmail()
+[DEBUG] [2021-05-24 16:09] ==>  Preparing: select ID, EMAIL, PASSWORD, NAME, REGDATE from member where email = ?
+[DEBUG] [2021-05-24 16:09] ==> Parameters: tkdrjs7@naver.com(String)
+[TRACE] [2021-05-24 16:09] <==    Columns: ID, EMAIL, PASSWORD, NAME, REGDATE
+[TRACE] [2021-05-24 16:09] <==        Row: 66, tkdrjs7@naver.com, 1111111, ±è»ó°Ç, 2021-05-24 11:49:22.0
+[DEBUG] [2021-05-24 16:09] <==      Total: 1
+[DEBUG] [2021-05-24 16:09] id=66,  name=±è»ó°Ç, password=1111111,  registerDateTime=null
+[DEBUG] [2021-05-24 16:09] testUpdate()
+[DEBUG] [2021-05-24 16:09] ==>  Preparing: update member set name = ?, password = ? where email = ?
+[DEBUG] [2021-05-24 16:09] ==> Parameters: 111111(String), tkdrjs(String), tkdrjs20@naver.com(String)
+[DEBUG] [2021-05-24 16:09] <==    Updates: 1
