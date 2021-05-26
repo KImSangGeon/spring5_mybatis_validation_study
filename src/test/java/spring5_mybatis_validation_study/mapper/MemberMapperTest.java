@@ -41,6 +41,14 @@ public class MemberMapperTest {
 		log.debug(selectMember.toString());
 		Assert.assertNotNull(selectMember);
 	}
+	@Test
+	public void testSelectById() {
+		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
+		
+		Member selectMember = mapper.selectById((long) 68);
+		log.debug(selectMember.toString());
+		Assert.assertNotNull(selectMember);
+	}
 
 //	@Test
 	public void testInsert() {

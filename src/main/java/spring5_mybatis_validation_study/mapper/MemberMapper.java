@@ -13,5 +13,6 @@ public interface MemberMapper {
 		int update(Member member);
 		
 		List<Member> selectByRedate(ListCommand listCommand);
+		Member selectById(Long memId);
 		
 }
