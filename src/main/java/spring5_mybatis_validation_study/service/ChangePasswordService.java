@@ -17,7 +17,6 @@ public class ChangePasswordService {
 		@Transactional
 		public void changePassword(String email, String oldPwd, String newPwd) {
 			Member member = memberMapper.selectByEmail(email);
-			System.out.println(member);
 			if(member == null) {
 				throw new MemberNotFoundException();
 			}

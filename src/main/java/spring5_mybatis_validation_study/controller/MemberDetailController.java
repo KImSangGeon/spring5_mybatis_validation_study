@@ -27,7 +27,7 @@ public class MemberDetailController {
 			mav.addObject("member", member);
 			mav.setViewName("member/memberDetail");
 			
-			return mav;
+			return mav; 
 			
 		}
 }

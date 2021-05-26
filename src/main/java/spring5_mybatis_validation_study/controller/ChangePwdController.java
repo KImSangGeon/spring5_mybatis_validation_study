@@ -39,7 +39,6 @@ public class ChangePwdController {
 			
 		}
 		try {
-			System.out.println();
 			changePasswordService.changePassword(				
 					authInfo.getEmail(), pwdCommand.getCurrentPassword(),
 					pwdCommand.getNewPassword());
