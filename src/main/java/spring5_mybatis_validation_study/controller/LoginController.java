@@ -17,13 +17,14 @@ import spring5_mybatis_validation_study.dto.AuthInfo;
 import spring5_mybatis_validation_study.dto.LoginCommand;
 import spring5_mybatis_validation_study.exception.WrongIdPasswordException;
 import spring5_mybatis_validation_study.service.AuthService;
+import spring5_mybatis_validation_study.service.impl.AuthServiceImpl;
 
 @Controller
 @RequestMapping("/login")
 public class LoginController {
 		
 		@Autowired
-		private AuthService authService;
+		private AuthService authService; 
 		
 		@GetMapping
 		public String form(LoginCommand loginCommand,
@@ -38,9 +39,9 @@ public class LoginController {
 		@PostMapping
 		public String submit(@Valid LoginCommand loginCommand, Errors errors, 
 												HttpSession ssession, HttpServletResponse response) {
-//			new LoginCommandValidator().validate(loginCommand, errors);
 			if(errors.hasErrors()) {
 				return "/login/loginForm";
+//				new LoginCommandValidator().validate(loginCommand, errors);
 			}
 			try {
 				//세션에 authInfo 저장해야함
@@ -49,6 +50,7 @@ public class LoginController {
 				
 				Cookie rememberCookie = new Cookie("REMEMBER", loginCommand.getEmail());
 				rememberCookie.setPath("/");
+				
 				if(loginCommand.isRememberEmail()) {
 					rememberCookie.setMaxAge(60 * 60 * 24 * 30);
 				}else {

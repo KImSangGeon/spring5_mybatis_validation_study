@@ -40,17 +40,19 @@ dependencies {
 	//mybatis
 	implementation group: 'org.mybatis', name: 'mybatis-spring', version: '2.0.6'
 	implementation group: 'org.mybatis', name: 'mybatis', version: '3.5.7'
+	
 	//hikari
 	implementation group: 'com.zaxxer', name: 'HikariCP', version: '3.4.5'	
 	
 	//mysql
-	implementation group: 'mysql', name: 'mysql-connector-java', version: '5.1.49'
-	
-	
+	implementation group: 'mysql', name: 'mysql-connector-java', version: '5.1.49'	
 
 	//validation
 	implementation group: 'javax.validation', name: 'validation-api', version: '2.0.1.Final'
 	implementation group: 'org.hibernate.validator', name: 'hibernate-validator', version: '6.2.0.Final'	
+	
+	//json library
+	implementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.12.3'
 	
 	implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.30'
 	 

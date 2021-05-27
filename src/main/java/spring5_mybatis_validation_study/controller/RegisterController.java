@@ -13,12 +13,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import spring5_mybatis_validation_study.dto.RegisterRequest;
 import spring5_mybatis_validation_study.exception.DuplicateMemberException;
 import spring5_mybatis_validation_study.service.MemberRegisterService;
+import spring5_mybatis_validation_study.service.impl.MemberRegisterImpl;
 
 
 @Controller
 public class RegisterController {
 		@Autowired
-		private MemberRegisterService service;
+		private MemberRegisterService memberRegisterService;
 
 		@RequestMapping("/register/step1")
 		public String handleStep1() {
@@ -51,7 +52,7 @@ public class RegisterController {
 			}
 			
 			try {
-				service.regist(reqReq);
+				memberRegisterService.regist(reqReq);
 				return "register/step3";
 			}catch (DuplicateMemberException ex) {
 				errors.rejectValue("email", "duplicate");

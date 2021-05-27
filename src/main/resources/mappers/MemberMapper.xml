@@ -16,6 +16,10 @@
 			from member 
 		</sql>
 		
+		<select id="selectAll" resultMap="ResMember">
+			<include refid="selectSQL"/>		
+		</select>
+		
 		<select id="selectByEmail" resultType="Member">
 			<include refid="selectSQL"/>
 			where email = #{email}	

@@ -15,6 +15,7 @@ import spring5_mybatis_validation_study.dto.AuthInfo;
 import spring5_mybatis_validation_study.dto.ChangePwdCommand;
 import spring5_mybatis_validation_study.exception.WrongIdPasswordException;
 import spring5_mybatis_validation_study.service.ChangePasswordService;
+import spring5_mybatis_validation_study.service.impl.ChangePasswordImpl;
 
 
 @Controller
@@ -32,11 +33,10 @@ public class ChangePwdController {
 	@PostMapping
 	public String submit(@ModelAttribute("command")
 	@Valid ChangePwdCommand pwdCommand, Errors errors, HttpSession session) {
-//		new ChangePwdCommandValidator();
 		AuthInfo authInfo = (AuthInfo) session.getAttribute("authInfo");
 		if(errors.hasErrors()) {
 			return "edit/changePwdForm";			
-			
+//			new ChangePwdCommandValidator();
 		}
 		try {
 			changePasswordService.changePassword(				

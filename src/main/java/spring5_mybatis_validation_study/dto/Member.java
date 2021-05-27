@@ -2,14 +2,20 @@ package spring5_mybatis_validation_study.dto;
 
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import spring5_mybatis_validation_study.exception.WrongIdPasswordException;
 
+@JsonIgnoreProperties({"password"})
 public class Member {
 
 	private Long id;
 	private String email;
+	@JsonIgnore
 	private String password;
 	private String name;
+//	@JsonFormat(pattern = "yyyyMMddHHmmss")
 	private LocalDateTime registerDateTime;
 	
 	public void changePassword(String oldPassword, String  newPassword) {

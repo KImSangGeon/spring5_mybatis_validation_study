@@ -1,94 +1,33 @@
-[DEBUG] [2021-05-26 09:53] testDataSource()
-[DEBUG] [2021-05-26 09:53] DataSource HikariDataSource (HikariPool-1)
-[DEBUG] [2021-05-26 09:53] LoginTimeout 30
-[DEBUG] [2021-05-26 09:53] testSqlSession()
-[DEBUG] [2021-05-26 09:53] session org.apache.ibatis.session.defaults.DefaultSqlSession@dc33338
-[DEBUG] [2021-05-26 09:53] testSelectMemberByDate()
-[DEBUG] [2021-05-26 09:53] ==>  Preparing: select ID, EMAIL, PASSWORD, NAME, REGDATE from member where REGDATE between ? and ? order by REGDATE DESC
-[DEBUG] [2021-05-26 09:53] ==> Parameters: 2021-05-17T00:00(LocalDateTime), 2021-05-26T00:00(LocalDateTime)
-[TRACE] [2021-05-26 09:53] <==    Columns: ID, EMAIL, PASSWORD, NAME, REGDATE
-[TRACE] [2021-05-26 09:53] <==        Row: 71, test3@test.com, 111111, ±èÁöÀº, 2021-05-25 20:19:57.0
-[TRACE] [2021-05-26 09:53] <==        Row: 70, test2@test.com, , ±è¹Î, 2021-05-24 16:04:22.0
-[TRACE] [2021-05-26 09:53] <==        Row: 68, test1@test.com, 111, ±è»óÀÏ, 2021-05-24 12:44:01.0
-[TRACE] [2021-05-26 09:53] <==        Row: 67, test@test.com, 111111, ±è±æµ¿, 2021-05-24 11:50:02.0
-[TRACE] [2021-05-26 09:53] <==        Row: 66, tkdrjs7@naver.com, 1111111, ±è»ó°Ç, 2021-05-24 11:49:22.0
-[DEBUG] [2021-05-26 09:53] <==      Total: 5
-[DEBUG] [2021-05-26 09:53] testSelectByEmail()
-[DEBUG] [2021-05-26 09:53] ==>  Preparing: select ID, EMAIL, PASSWORD, NAME, REGDATE from member where email = ?
-[DEBUG] [2021-05-26 09:53] ==> Parameters: tkdrjs7@naver.com(String)
-[TRACE] [2021-05-26 09:53] <==    Columns: ID, EMAIL, PASSWORD, NAME, REGDATE
-[TRACE] [2021-05-26 09:53] <==        Row: 66, tkdrjs7@naver.com, 1111111, ±è»ó°Ç, 2021-05-24 11:49:22.0
-[DEBUG] [2021-05-26 09:53] <==      Total: 1
-[DEBUG] [2021-05-26 09:53] id=66,  name=±è»ó°Ç, password=1111111,  registerDateTime=null
-[DEBUG] [2021-05-26 09:53] testUpdate()
-[DEBUG] [2021-05-26 09:53] ==>  Preparing: update member set name = ?, password = ? where email = ?
-[DEBUG] [2021-05-26 09:53] ==> Parameters: 111111(String), tkdrjs(String), tkdrjs20@naver.com(String)
-[DEBUG] [2021-05-26 09:53] <==    Updates: 1
-[DEBUG] [2021-05-26 09:53] testSelectById()
-[DEBUG] [2021-05-26 09:53] ==>  Preparing: select ID, EMAIL, PASSWORD, NAME, REGDATE from member where id = ?
-[DEBUG] [2021-05-26 09:53] ==> Parameters: 68(Long)
-[TRACE] [2021-05-26 09:53] <==    Columns: ID, EMAIL, PASSWORD, NAME, REGDATE
-[TRACE] [2021-05-26 09:53] <==        Row: 68, test1@test.com, 111, ±è»óÀÏ, 2021-05-24 12:44:01.0
-[DEBUG] [2021-05-26 09:53] <==      Total: 1
-[DEBUG] [2021-05-26 09:53] [id=68,  name=±è»óÀÏ, password=111,  registerDateTime=2021-05-24T12:44:01]
-[DEBUG] [2021-05-26 09:59] testDataSource()
-[DEBUG] [2021-05-26 09:59] DataSource HikariDataSource (HikariPool-1)
-[DEBUG] [2021-05-26 09:59] LoginTimeout 30
-[DEBUG] [2021-05-26 09:59] testSqlSession()
-[DEBUG] [2021-05-26 09:59] session org.apache.ibatis.session.defaults.DefaultSqlSession@79b25127
-[DEBUG] [2021-05-26 09:59] testSelectMemberByDate()
-[DEBUG] [2021-05-26 09:59] ==>  Preparing: select ID, EMAIL, PASSWORD, NAME, REGDATE from member where REGDATE between ? and ? order by REGDATE DESC
-[DEBUG] [2021-05-26 09:59] ==> Parameters: 2021-05-17T00:00(LocalDateTime), 2021-05-26T00:00(LocalDateTime)
-[TRACE] [2021-05-26 09:59] <==    Columns: ID, EMAIL, PASSWORD, NAME, REGDATE
-[TRACE] [2021-05-26 09:59] <==        Row: 71, test3@test.com, 111111, ±èÁöÀº, 2021-05-25 20:19:57.0
-[TRACE] [2021-05-26 09:59] <==        Row: 70, test2@test.com, , ±è¹Î, 2021-05-24 16:04:22.0
-[TRACE] [2021-05-26 09:59] <==        Row: 68, test1@test.com, 111, ±è»óÀÏ, 2021-05-24 12:44:01.0
-[TRACE] [2021-05-26 09:59] <==        Row: 67, test@test.com, 111111, ±è±æµ¿, 2021-05-24 11:50:02.0
-[TRACE] [2021-05-26 09:59] <==        Row: 66, tkdrjs7@naver.com, 1111111, ±è»ó°Ç, 2021-05-24 11:49:22.0
-[DEBUG] [2021-05-26 09:59] <==      Total: 5
-[DEBUG] [2021-05-26 09:59] testSelectByEmail()
-[DEBUG] [2021-05-26 09:59] ==>  Preparing: select ID, EMAIL, PASSWORD, NAME, REGDATE from member where email = ?
-[DEBUG] [2021-05-26 09:59] ==> Parameters: tkdrjs7@naver.com(String)
-[TRACE] [2021-05-26 09:59] <==    Columns: ID, EMAIL, PASSWORD, NAME, REGDATE
-[TRACE] [2021-05-26 09:59] <==        Row: 66, tkdrjs7@naver.com, 1111111, ±è»ó°Ç, 2021-05-24 11:49:22.0
-[DEBUG] [2021-05-26 09:59] <==      Total: 1
-[DEBUG] [2021-05-26 09:59] id=66,  name=±è»ó°Ç, password=1111111,  registerDateTime=null
-[DEBUG] [2021-05-26 09:59] testUpdate()
-[DEBUG] [2021-05-26 09:59] ==>  Preparing: update member set name = ?, password = ? where email = ?
-[DEBUG] [2021-05-26 09:59] ==> Parameters: 111111(String), tkdrjs(String), tkdrjs20@naver.com(String)
-[DEBUG] [2021-05-26 09:59] <==    Updates: 1
-[DEBUG] [2021-05-26 09:59] testSelectById()
-[DEBUG] [2021-05-26 09:59] ==>  Preparing: select ID, EMAIL, PASSWORD, NAME, REGDATE from member where id = ?
-[DEBUG] [2021-05-26 09:59] ==> Parameters: 68(Long)
-[TRACE] [2021-05-26 09:59] <==    Columns: ID, EMAIL, PASSWORD, NAME, REGDATE
-[TRACE] [2021-05-26 09:59] <==        Row: 68, test1@test.com, 111, ±è»óÀÏ, 2021-05-24 12:44:01.0
-[DEBUG] [2021-05-26 09:59] <==      Total: 1
-[DEBUG] [2021-05-26 09:59] id=68,  name=±è»óÀÏ, password=111,  registerDateTime=2021-05-24T12:44:01
-[DEBUG] [2021-05-26 11:37] testSelectMemberByDate()
-[DEBUG] [2021-05-26 11:37] ==>  Preparing: select ID, EMAIL, PASSWORD, NAME, REGDATE from member where REGDATE between ? and ? order by REGDATE DESC
-[DEBUG] [2021-05-26 11:37] ==> Parameters: 2021-05-17T00:00(LocalDateTime), 2021-05-26T00:00(LocalDateTime)
-[TRACE] [2021-05-26 11:37] <==    Columns: ID, EMAIL, PASSWORD, NAME, REGDATE
-[TRACE] [2021-05-26 11:37] <==        Row: 71, test3@test.com, 111111, ê¹€ì§€ì€, 2021-05-25 20:19:57.0
-[TRACE] [2021-05-26 11:37] <==        Row: 70, test2@test.com, , ê¹€ë¯¼, 2021-05-24 16:04:22.0
-[TRACE] [2021-05-26 11:37] <==        Row: 68, test1@test.com, 111, ê¹€ìƒì¼, 2021-05-24 12:44:01.0
-[TRACE] [2021-05-26 11:37] <==        Row: 67, test@test.com, 111111, ê¹€ê¸¸ë™, 2021-05-24 11:50:02.0
-[TRACE] [2021-05-26 11:37] <==        Row: 66, tkdrjs7@naver.com, 1111111, ê¹€ìƒê±´, 2021-05-24 11:49:22.0
-[DEBUG] [2021-05-26 11:37] <==      Total: 5
-[DEBUG] [2021-05-26 11:37] testSelectByEmail()
-[DEBUG] [2021-05-26 11:37] ==>  Preparing: select ID, EMAIL, PASSWORD, NAME, REGDATE from member where email = ?
-[DEBUG] [2021-05-26 11:37] ==> Parameters: tkdrjs7@naver.com(String)
-[TRACE] [2021-05-26 11:37] <==    Columns: ID, EMAIL, PASSWORD, NAME, REGDATE
-[TRACE] [2021-05-26 11:37] <==        Row: 66, tkdrjs7@naver.com, 1111111, ê¹€ìƒê±´, 2021-05-24 11:49:22.0
-[DEBUG] [2021-05-26 11:37] <==      Total: 1
-[DEBUG] [2021-05-26 11:37] id=66,  name=ê¹€ìƒê±´, password=1111111,  registerDateTime=null
-[DEBUG] [2021-05-26 11:37] testUpdate()
-[DEBUG] [2021-05-26 11:37] ==>  Preparing: update member set name = ?, password = ? where email = ?
-[DEBUG] [2021-05-26 11:37] ==> Parameters: 111111(String), tkdrjs(String), tkdrjs20@naver.com(String)
-[DEBUG] [2021-05-26 11:37] <==    Updates: 1
-[DEBUG] [2021-05-26 11:37] testSelectById()
-[DEBUG] [2021-05-26 11:37] ==>  Preparing: select ID, EMAIL, PASSWORD, NAME, REGDATE from member where id = ?
-[DEBUG] [2021-05-26 11:37] ==> Parameters: 68(Long)
-[TRACE] [2021-05-26 11:37] <==    Columns: ID, EMAIL, PASSWORD, NAME, REGDATE
-[TRACE] [2021-05-26 11:37] <==        Row: 68, test1@test.com, 111, ê¹€ìƒì¼, 2021-05-24 12:44:01.0
-[DEBUG] [2021-05-26 11:37] <==      Total: 1
-[DEBUG] [2021-05-26 11:37] id=68,  name=ê¹€ìƒì¼, password=111,  registerDateTime=2021-05-24T12:44:01
+[DEBUG] [2021-05-27 09:52] testDataSource()
+[DEBUG] [2021-05-27 09:52] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2021-05-27 09:52] LoginTimeout 30
+[DEBUG] [2021-05-27 09:52] testSqlSession()
+[DEBUG] [2021-05-27 09:52] session org.apache.ibatis.session.defaults.DefaultSqlSession@2403e7fc
+[DEBUG] [2021-05-27 09:52] testSelectMemberByDate()
+[DEBUG] [2021-05-27 09:52] ==>  Preparing: select ID, EMAIL, PASSWORD, NAME, REGDATE from member where REGDATE between ? and ? order by REGDATE DESC
+[DEBUG] [2021-05-27 09:52] ==> Parameters: 2021-05-17T00:00(LocalDateTime), 2021-05-26T00:00(LocalDateTime)
+[TRACE] [2021-05-27 09:52] <==    Columns: ID, EMAIL, PASSWORD, NAME, REGDATE
+[TRACE] [2021-05-27 09:52] <==        Row: 71, test3@test.com, 111111, ±èÁöÀº, 2021-05-25 20:19:57.0
+[TRACE] [2021-05-27 09:52] <==        Row: 70, test2@test.com, , ±è¹Î, 2021-05-24 16:04:22.0
+[TRACE] [2021-05-27 09:52] <==        Row: 68, test1@test.com, 111, ±è»óÀÏ, 2021-05-24 12:44:01.0
+[TRACE] [2021-05-27 09:52] <==        Row: 67, test@test.com, 111111, ±è±æµ¿, 2021-05-24 11:50:02.0
+[TRACE] [2021-05-27 09:52] <==        Row: 66, tkdrjs7@naver.com, 1111111, ±è»ó°Ç, 2021-05-24 11:49:22.0
+[DEBUG] [2021-05-27 09:52] <==      Total: 5
+[DEBUG] [2021-05-27 09:52] testSelectByEmail()
+[DEBUG] [2021-05-27 09:52] ==>  Preparing: select ID, EMAIL, PASSWORD, NAME, REGDATE from member where email = ?
+[DEBUG] [2021-05-27 09:52] ==> Parameters: tkdrjs7@naver.com(String)
+[TRACE] [2021-05-27 09:52] <==    Columns: ID, EMAIL, PASSWORD, NAME, REGDATE
+[TRACE] [2021-05-27 09:52] <==        Row: 66, tkdrjs7@naver.com, 1111111, ±è»ó°Ç, 2021-05-24 11:49:22.0
+[DEBUG] [2021-05-27 09:52] <==      Total: 1
+[DEBUG] [2021-05-27 09:52] id=66,  name=±è»ó°Ç, password=1111111,  registerDateTime=null
+[DEBUG] [2021-05-27 09:52] testUpdate()
+[DEBUG] [2021-05-27 09:52] ==>  Preparing: update member set name = ?, password = ? where email = ?
+[DEBUG] [2021-05-27 09:52] ==> Parameters: 111111(String), tkdrjs(String), tkdrjs20@naver.com(String)
+[DEBUG] [2021-05-27 09:52] <==    Updates: 1
+[DEBUG] [2021-05-27 09:52] testSelectById()
+[DEBUG] [2021-05-27 09:52] ==>  Preparing: select ID, EMAIL, PASSWORD, NAME, REGDATE from member where id = ?
+[DEBUG] [2021-05-27 09:52] ==> Parameters: 68(Long)
+[TRACE] [2021-05-27 09:52] <==    Columns: ID, EMAIL, PASSWORD, NAME, REGDATE
+[TRACE] [2021-05-27 09:52] <==        Row: 68, test1@test.com, 111, ±è»óÀÏ, 2021-05-24 12:44:01.0
+[DEBUG] [2021-05-27 09:52] <==      Total: 1
+[DEBUG] [2021-05-27 09:52] id=68,  name=±è»óÀÏ, password=111,  registerDateTime=2021-05-24T12:44:01

@@ -8,6 +8,7 @@ import spring5_mybatis_validation_study.dto.Member;
 public interface MemberMapper {
 		
 		Member selectByEmail(String email);				
+		List<Member> selectAll();
 	
 		int insert(Member member);
 		int update(Member member);

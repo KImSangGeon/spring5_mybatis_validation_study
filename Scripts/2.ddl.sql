@@ -13,5 +13,5 @@ select ID, EMAIL, PASSWORD, NAME, REGDATE from member;
 
 select * from member where REGDATE between '2021-05-25' and '2021-05-26' order by regdate desc;
 
-delete from member where id > 36;
+delete from member where id > 77;
 

@@ -10,18 +10,18 @@ import org.springframework.web.servlet.ModelAndView;
 
 import spring5_mybatis_validation_study.dto.Member;
 import spring5_mybatis_validation_study.exception.MemberNotFoundException;
-import spring5_mybatis_validation_study.mapper.MemberMapper;
+import spring5_mybatis_validation_study.service.MemberDetailService;
+import spring5_mybatis_validation_study.service.impl.MemberDetailImpl;
 
 @Controller
 public class MemberDetailController {
 		
 		@Autowired
-		private MemberMapper memberMapper;
+		private MemberDetailService memberDetailService;
 		
 		@GetMapping("/members/{id}")
 		public ModelAndView detail(@PathVariable("id") Long memId) {
-			Member member = memberMapper.selectById(memId);
-			System.out.println(member);
+			Member member = memberDetailService.showById(memId);
 			if(member == null) {
 				throw new MemberNotFoundException();
 			}
