@@ -1,7 +1,7 @@
 {
 	"folders": {},
 	"connections": {
-		"mysql5-179a18b3718-4be8b8713910d0d1": {
+		"mysql5-179abe19f72-6c2cb1a90818d8aa": {
 			"provider": "mysql",
 			"driver": "mysql5",
 			"name": "localhost",
@@ -18,7 +18,7 @@
 				"handlers": {}
 			}
 		},
-		"mysql5-179a18b80d2-59e349b125b23f35": {
+		"mysql5-179abe1c8c1-1a763d888144dee1": {
 			"provider": "mysql",
 			"driver": "mysql5",
 			"name": "spring5",
