@@ -27,13 +27,17 @@
 		
 		<insert id="insert" parameterType="Member" >
 				insert into member(EMAIL, PASSWORD, NAME, REGDATE)
-				 values (#{email}, #{password}, #{name}, #{ registerDateTime})		
+				 values (#{email}, #{password}, #{name}, now())		
 		</insert>
 		
 		<update id="update" parameterType="Member">
 				update member set name = #{name}, password = #{password} 
 				where email = #{email}
 		</update>
+		
+		<delete id="delete" parameterType="Member">
+				delete from member	where email = #{email}
+		</delete>
 		
 		<!-- 기간별 조회 -->
 		<select id="selectByRedate" parameterType="ListCommand" resultMap="ResMember" >

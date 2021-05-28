@@ -36,11 +36,13 @@ public class Member {
 		this.name = name;
 	}
 
+	public Member() {}
 
-	public Member() {
+
+	public Member(String email) {
+		super();
+		this.email = email;
 	}
-
-
 	public Member(String email, String password, String name, LocalDateTime registerDateTime) {
 		super();
 		this.email = email;

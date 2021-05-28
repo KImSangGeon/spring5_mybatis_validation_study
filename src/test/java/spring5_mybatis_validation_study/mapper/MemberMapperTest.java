@@ -45,7 +45,7 @@ public class MemberMapperTest {
 	public void testSelectById() {
 		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
 		
-		Member selectMember = mapper.selectById((long) 68);
+		Member selectMember = mapper.selectById( (long) 68);
 		log.debug(selectMember.toString());
 		Assert.assertNotNull(selectMember);
 	}
@@ -65,6 +65,15 @@ public class MemberMapperTest {
 		
 		Member newMember = new Member("tkdrjs20@naver.com", "tkdrjs", "111111");
 		int res =mapper.update(newMember);
+		Assert.assertEquals(1, res);
+	}
+	
+	@Test
+	public void testDelete() {
+		log.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "()");
+		
+		Member member = new Member("test@test.com");
+		int res =mapper.delete(member);
 		Assert.assertEquals(1, res);
 	}
 	

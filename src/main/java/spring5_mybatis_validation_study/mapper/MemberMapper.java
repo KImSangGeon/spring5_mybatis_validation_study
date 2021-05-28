@@ -12,6 +12,7 @@ public interface MemberMapper {
 	
 		int insert(Member member);
 		int update(Member member);
+		int delete(Member member);
 		
 		List<Member> selectByRedate(ListCommand listCommand);
 		Member selectById(Long memId);
